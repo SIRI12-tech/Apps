@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'img/favicon.png' %}"
+      type="image/x-icon"
+    />
+
+    <!-- Remixicon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <title>Responsive Portfolio Website - SiriCoding</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="{% url 'home' %}" class="nav__logo"> SIRI </a>
+        <!-- Adjust URL for home view if necessary -->
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="ri-home-5-line"></i> Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="ri-trophy-line"></i> Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#qualification" class="nav__link">
+                <i class="ri-book-open-line"></i> Qualification
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">
+                <i class="ri-briefcase-line"></i> Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">
+                <i class="ri-image-line"></i> Projects
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="ri-chat-3-line"></i> Contact
+              </a>
+            </li>
+          </ul>
+
+          <!-- Close button -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+        <div class="nav__buttons">
+          <!-- Theme change button -->
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-4-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Home Section -->
+      <section class="home section" id="home">
+        <div class="home__container container grid section__border">
+          <div class="home__data grid">
+            <h1 class="home__title">
+              Hi, I'm Siri <br />
+              Frontend Developer <br />
+              Based in Delta State <br />
+            </h1>
+
+            <div class="home__blob grid">
+              <div class="home__perfil">
+                <img src="{% static 'img/perfil.png' %}" alt="home perfil" />
+              </div>
+
+              <img
+                src="{% static 'img/shape-wawes.svg' %}"
+                alt=""
+                class="home__shape-wawes"
+              />
+              <img
+                src="{% static 'img/shape-circle.svg' %}"
+                alt=""
+                class="home__shape-circle"
+              />
+            </div>
+
+            <ul class="home__social">
+              <a
+                href="https://www.linkedin.com/in/siri-coding"
+                target="_blank"
+                class="home__social-link"
+              >
+                <i class="ri-linkedin-box-line"></i>
+              </a>
+              <a
+                href="https://github.com/SIRI12-tech"
+                target="_blank"
+                class="home__social-link"
+              >
+                <i class="ri-github-line"></i>
+              </a>
+              <a
+                href="https://dribbble.com/Siricoding"
+                target="_blank"
+                class="home__social-link"
+              >
+                <i class="ri-dribbble-line"></i>
+              </a>
+            </ul>
+          </div>
+
+          <!-- Home Info 1 -->
+          <div class="home__info">
+            <div>
+              <h3 class="home__info-title">BIOGRAPHY</h3>
+              <p class="home__info-description">
+                Hi, I'm Siri, Frontend Developer. Passionate about designing
+                beautiful Web interfaces. Based in Delta State.
+              </p>
+            </div>
+            <div>
+              <h3 class="home__info-title">CONTACT</h3>
+              <p class="home__info-description">
+                Asaba, Delta State <br />
+                siricoding1@gmail.com <br />
+                +234 9130474359 <br />
+              </p>
+            </div>
+            <div>
+              <h3 class="home__info-title">SERVICES</h3>
+              <p class="home__info-description">
+                Website Design <br />
+                UI/UX Design <br />
+                Animation <br />
+              </p>
+            </div>
+          </div>
+
+          <!-- Home Info 2 -->
+          <div class="home__info">
+            <div>
+              <h3 class="home__info-title">YEARS OF EXPERIENCE</h3>
+              <p class="home__info-number">08+</p>
+            </div>
+            <div>
+              <h3 class="home__info-title">COMPLETED PROJECTS</h3>
+              <p class="home__info-number">24+</p>
+            </div>
+            <div>
+              <h3 class="home__info-title">COMPANIES WORKED</h3>
+              <p class="home__info-number">07+</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <span class="section__subtitle">My favourite skills</span>
+
+        <div class="skills__container container grid section__border">
+          <!-- Skills 1 -->
+          <div class="skills__content">
+            <h3 class="skills__title">
+              <i class="ri-braces-line"></i> Frontend Developer
+            </h3>
+            <div class="skills__info">
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img src="{% static 'img/html-1.svg' %}" alt="skills image" />
+                </div>
+                <h3 class="skills__name">HTML</h3>
+                <span class="skills__subtitle">Intermediate</span>
+              </div>
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img src="{% static 'img/css-3.svg' %}" alt="skills image" />
+                </div>
+                <h3 class="skills__name">CSS</h3>
+                <span class="skills__subtitle">Advance</span>
+              </div>
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img
+                    src="{% static 'img/logo-javascript.svg' %}"
+                    alt="skills image"
+                  />
+                </div>
+                <h3 class="skills__name">Javascript</h3>
+                <span class="skills__subtitle">Intermediate</span>
+              </div>
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img
+                    src="{% static 'img/react-2.svg' %}"
+                    alt="skills image"
+                  />
+                </div>
+                <h3 class="skills__name">React</h3>
+                <span class="skills__subtitle">Basic</span>
+              </div>
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img
+                    src="{% static 'img/git-icon.svg' %}"
+                    alt="skills image"
+                  />
+                </div>
+                <h3 class="skills__name">Git</h3>
+                <span class="skills__subtitle">Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills 2 -->
+          <div class="skills__content">
+            <h3 class="skills__title">
+              <i class="ri-pantone-line"></i> Web Designer
+            </h3>
+            <div class="skills__info">
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img
+                    src="{% static 'img/figma-1.svg' %}"
+                    alt="skills image"
+                  />
+                </div>
+                <h3 class="skills__name">Figma</h3>
+                <span class="skills__subtitle">Advance</span>
+              </div>
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img src="{% static 'img/xd.svg' %}" alt="skills image" />
+                </div>
+                <h3 class="skills__name">Adobe XD</h3>
+                <span class="skills__subtitle">Intermediate</span>
+              </div>
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img
+                    src="{% static 'img/photoshop-cc.svg' %}"
+                    alt="skills image"
+                  />
+                </div>
+                <h3 class="skills__name">Photoshop</h3>
+                <span class="skills__subtitle">Advance</span>
+              </div>
+              <div class="skills__data">
+                <div class="skills__blob">
+                  <img
+                    src="{% static 'img/illustrator.svg' %}"
+                    alt="skills image"
+                  />
+                </div>
+                <h3 class="skills__name">Illustrator</h3>
+                <span class="skills__subtitle">Advance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
